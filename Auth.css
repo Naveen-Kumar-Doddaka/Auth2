@@ -1,0 +1,149 @@
+/* ===== RESET ===== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#F8FAFC;
+    color:#0F172A;
+}
+
+/* ===== HEADER ===== */
+header{
+    background:#0F172A;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:700;
+    color:#FFFFFF;
+}
+
+nav a{
+    color:#CBD5E1;
+    text-decoration:none;
+    margin-left:25px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#38BDF8;
+}
+
+/* ===== AUTH SECTION ===== */
+.auth-container{
+    min-height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:60px 20px;
+}
+
+.auth-box{
+    background:#FFFFFF;
+    width:100%;
+    max-width:450px;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.08);
+    position:relative;
+    overflow:hidden;
+}
+
+/* Tabs */
+.auth-tabs{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:30px;
+}
+
+.auth-tabs button{
+    flex:1;
+    padding:12px;
+    border:none;
+    background:#E2E8F0;
+    cursor:pointer;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.auth-tabs button.active{
+    background:#2563EB;
+    color:#FFFFFF;
+}
+
+.auth-tabs button:first-child{
+    border-radius:10px 0 0 10px;
+}
+
+.auth-tabs button:last-child{
+    border-radius:0 10px 10px 0;
+}
+
+/* Forms */
+.form-section{
+    display:none;
+    animation:fade 0.3s ease-in-out;
+}
+
+.form-section.active{
+    display:block;
+}
+
+@keyframes fade{
+    from{opacity:0; transform:translateY(10px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+form input,
+form textarea{
+    width:100%;
+    padding:12px;
+    margin:8px 0 18px;
+    border:1px solid #CBD5E1;
+    border-radius:8px;
+    outline:none;
+    font-size:14px;
+}
+
+form input:focus,
+form textarea:focus{
+    border-color:#2563EB;
+}
+
+form button{
+    width:100%;
+    padding:14px;
+    background:#2563EB;
+    color:#FFFFFF;
+    border:none;
+    border-radius:30px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+form button:hover{
+    background:#1E40AF;
+}
+
+/* Footer */
+footer{
+    background:#020617;
+    color:#CBD5E1;
+    text-align:center;
+    padding:30px;
+}
+
+@media(max-width:500px){
+    .auth-box{
+        padding:25px;
+    }
+}
